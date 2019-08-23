@@ -1,18 +1,16 @@
 <template>
-	<section>
-  	<div class="home container">
+  <section>
+    <div class="home container">
       <h1>Vue.js Boilerplate</h1>
-  	 <img class="project-home-logo" alt="Vue logo" src="../assets/logo.png">
-  	</div>
-	</section>
+      <img class="project-home-logo" alt="Vue logo" src="../assets/logo.png">
+    </div>
+  </section>
 </template>
 
 <script>
 // @ is an alias to /src
-
-
 export default {
-  name: 'home',
+  name: 'home'
 }
 </script>
 

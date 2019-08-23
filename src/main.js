@@ -4,7 +4,15 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+//axios.defaults.baseURL = '';
+
+Vue.use(VueAxios, axios)
+
 Vue.config.productionTip = false
+
 
 new Vue({
   router,
