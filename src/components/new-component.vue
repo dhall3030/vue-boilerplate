@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'New Component',
+  name: 'NewComponent',
   data () {
     return {
       title: 'New Component',
