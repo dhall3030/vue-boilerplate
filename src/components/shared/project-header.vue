@@ -13,7 +13,7 @@
     <btn-toggle-menu @clicked="onClickChild" :open="isOpen"></btn-toggle-menu>
     <div class="overlay" :class="{open: isOpen }" @click="isOpen = !isOpen"></div>
     <div class="side-menu" :class="{open: isOpen }"><div @click="isOpen = !isOpen">close[x]</div>
-      <div class="side-menu-links" v-for="link in menuData.links">
+       <div class="side-menu-links" v-for="(link, index) in menuData.links" :key="index">
         <router-link  :to="link.url" :title="link.title">{{link.name}}</router-link>
       </div>
     </div>
@@ -55,7 +55,7 @@ export default {
 #main_header_nav {
   background-color: #000;
   height: 60px;
-  color: #FFF;
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@ export default {
   right: 0;
   background-color: $white;
   overflow-x: hidden;
-  transition: transform .5s;
+  transition: transform 0.5s;
   transform: translateX(250px);
   border-right: 1px solid #2c3e50;
 
@@ -97,7 +97,6 @@ export default {
 }
 
 .side-menu-links {
-
   a {
     font-weight: bold;
     text-decoration: none;
@@ -107,7 +106,7 @@ export default {
     display: block;
     background-color: $project-blue;
     color: #fff;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
 
     &.router-link-exact-active {
       color: #fff;
@@ -130,7 +129,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   cursor: pointer;
 
