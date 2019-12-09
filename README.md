@@ -1,29 +1,21 @@
 # vue-boilerplate
 
-## Project setup
+### Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Start project in development mode
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build project
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
