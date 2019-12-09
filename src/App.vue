@@ -34,6 +34,6 @@ export default {
 <style lang="scss">
   main {
     padding-top: 80px;
-    min-height:  50vh;
+    min-height: 50vh;
   }
 </style>

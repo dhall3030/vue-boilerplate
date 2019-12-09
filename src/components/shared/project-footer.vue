@@ -43,7 +43,6 @@ export default {
     padding: 5px;
     display: block;
     color: $project-blue;
-
   }
 }
 

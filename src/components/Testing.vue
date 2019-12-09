@@ -47,12 +47,13 @@ export default {
   }
 
   @media (min-width: 1450px) {
-     width: calc(100% / 3);
+    width: calc(100% / 3);
   }
 }
 
 .test-box {
   @include position-element(50%,50%);
+
   width: 50%;
   height: 300px;
   background-color: $project-blue;
