@@ -1,10 +1,10 @@
 <template>
-  <div :class="{open: open }" id="nav-icon" @click="onClickButton">
+  <button :class="{open: open }" class="project-nav-icon" @click="onClickButton">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -13,8 +13,12 @@ export default {
   props: ['open'],
   methods: {
     onClickButton (event) {
-      this.open = !this.open
-      this.$emit('clicked', this.open)
+     this.$emit('clicked', !this.open)
+    }
+  },
+  computed: {
+    isOpen(){
+      return this.open
     }
   }
 }
@@ -22,7 +26,7 @@ export default {
 
 <style lang="scss">
 
-#nav-icon {
+.project-nav-icon {
   width: 30px;
   height: 35px;
   position: absolute;
@@ -39,9 +43,11 @@ export default {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  border: 0;
+  background-color:  transparent;
 }
 
-#nav-icon span {
+.project-nav-icon span {
   display: block;
   position: absolute;
   height: 3px;
@@ -60,40 +66,40 @@ export default {
   transition: 0.25s ease-in-out;
 }
 
-#nav-icon span:nth-child(1) {
+.project-nav-icon span:nth-child(1) {
   top: 0;
 }
 
-#nav-icon span:nth-child(2),
-#nav-icon span:nth-child(3) {
+.project-nav-icon span:nth-child(2),
+.project-nav-icon span:nth-child(3) {
   top: 10px;
 }
 
-#nav-icon span:nth-child(4) {
+.project-nav-icon span:nth-child(4) {
   top: 20px;
 }
 
-#nav-icon.open span:nth-child(1) {
+.project-nav-icon.open span:nth-child(1) {
   top: 10px;
   width: 0%;
   left: 50%;
 }
 
-#nav-icon.open span:nth-child(2) {
+.project-nav-icon.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-#nav-icon.open span:nth-child(3) {
+.project-nav-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-#nav-icon.open span:nth-child(4) {
+.project-nav-icon.open span:nth-child(4) {
   top: 10px;
   width: 0%;
   left: 50%;
